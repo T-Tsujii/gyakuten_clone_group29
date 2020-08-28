@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :only => :index
+  resources :movies, only: [:index]
 end

@@ -8,6 +8,5 @@ class Import
     # row は CSV::Row クラスである。これはモデルの引数として渡せないのでハッシュに変換しておく。
     list = []
     CSV.foreach(path, headers: true) { |row| list << row.to_h }
-    list
   end
 end

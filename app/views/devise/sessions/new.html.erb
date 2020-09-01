@@ -12,7 +12,8 @@
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+  <!--class名の変更(field>field-checkbox)-->
+    <div class="field-checkbox">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
@@ -21,6 +22,9 @@
   <div class="actions">
     <%= f.submit t('.sign_in') %>
   </div>
+
+  
 <% end %>
+<hr style="height: 0.1px; margin: 3rem 0; background-color:black">
 
 <%= render "devise/shared/links" %>

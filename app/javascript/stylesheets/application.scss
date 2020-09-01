@@ -5,7 +5,38 @@
  *= require_self
  */
 .base-container {
-  max-width: 992px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
+  
+}
+/*
+新規登録カラムの下の空白調整
+ */
+.field{
+  margin-bottom: 1rem;
+  
+}
+.field input{
+  width:100%;
+}
+
+.top-login{
+  background-color:#17a2b8;
+  text-align:center;
+  margin:0 auto;
+  width:100%;
+  padding:0.4rem 0;
+          a{
+            color:white;
+          }
+  }
+
+
+.actions input{
+  width:100%;
+  background-color:#007bff;
+  color:white;
+  border-color: #007bff;
+  padding:0.3rem 0;
 }

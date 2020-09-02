@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   
   def create
     movie = Movie.create!(movie_params)
+    flash[:notice] = "投稿しました"
     redirect_to movie
   end
 
@@ -18,11 +19,13 @@ class MoviesController < ApplicationController
 
   def update
     @movie.update!(movie_params)
+    flash[:notice] = "更新しました"
     redirect_to @movie
   end
 
   def destroy
     @movie.destroy!
+    flash[:alert] = "削除しました"
     redirect_to @movie
   end
 

@@ -5,47 +5,36 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
-  
 }
-/*
-新規登録カラムの下の空白調整
- */
-.field{
-  margin-bottom: 1rem;
-  
-}
-.field input{
+.btn-primary{
   width:100%;
-  padding:0.4rem 0;
-  border-color: rgba(0,0,0,0.125);
-}
-
-.top-login{
-  background-color:#17a2b8;
   text-align:center;
-  margin:0 auto;
+}
+
+.style-sign-in1 {
   width:100%;
+  text-align:center;
+  background-color:#17a2b8;
   padding:0.4rem 0;
-          a{
-            color:white;
-          }
-  }
-  .top-new{
-    background-color:#28a745;
-    text-align:center;
-    margin:0 auto;
-    width:100%;
-    padding:0.4rem 0;
-          a{
-            color:white;
-          }
-  }
-
-
-.actions input{
-  width:100%;
-  background-color:#007bff;
+  border-radius:0.25rem;
+}
+.style-sign-in1 a{
   color:white;
-  border-color: #007bff;
-  padding:0.3rem 0;
+  width:100%;
+  text-align:center;
+  background-color:#17a2b8;
+  padding:0.4rem 0;
+  border-radius:0.25rem;
+}
+
+.style-sign-up1{
+  width:100%;
+  text-align:center;
+  background-color:#28a745;
+  padding:0.4rem 0;
+  border-radius:0.25rem;
+}
+
+.style-sign-up1 a{
+  color:white;
 }

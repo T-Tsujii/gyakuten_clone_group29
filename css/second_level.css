@@ -1,7 +1,0 @@
-@import url(/Users/ryotasuzuki/Desktop/gyakuten_clone_group29/vendor/bundle/ruby/2.6.0/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/subfolder/another_plain.css);
-/* tests whether relative lookups of non-sass files works. */
-.default-old-css {
-  margin: 0px;
-}
-
-/* tests wheter relative lookups partials in the same directory. */

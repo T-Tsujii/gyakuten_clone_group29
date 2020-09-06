@@ -2,11 +2,52 @@
 
 
 .base-container {
-  max-width: 992px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
 }
 
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
 body {
   padding-top: 56px;
+}
+
+.btn-primary{
+  width:100%;
+  text-align:center;
+}
+
+.style-sign-in1 {
+  width:100%;
+  text-align:center;
+  background-color:#17a2b8;
+  padding:0.4rem 0;
+  border-radius:0.25rem;
+}
+.style-sign-in1 a{
+  color:white;
+  width:100%;
+  text-align:center;
+  background-color:#17a2b8;
+  padding:0.4rem 0;
+  border-radius:0.25rem;
+}
+
+.style-sign-up1{
+  width:100%;
+  text-align:center;
+  background-color:#28a745;
+  padding:0.4rem 0;
+  border-radius:0.25rem;
+}
+
+.style-sign-up1 a{
+  color:white;
 }

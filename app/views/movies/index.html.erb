@@ -6,17 +6,15 @@
       <div class="col-xs-12 col-md-6 col-lg-4"> 
         <div class="card border-dark mb-3">
           <div class="card-header p-0">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="col" width="560" height="315" src=<%= movie.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="card-header embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" width="560" height="315" src=<%= movie.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
               <div class = "card body">
-                <div class="card-body text-dark movie-body">
-                  <a href="#" class="btn btn-primary">視聴済みにする</a>
-                </div>
+                <a href="#" class="btn btn-primary">視聴済みにする</a>
                   <p class="card-text movie-title">
                     <%= "Lv.#{i}: " + movie.title %>           
                   </p>
               </div>
-            </div>
           </div>
         </div>
       </div>

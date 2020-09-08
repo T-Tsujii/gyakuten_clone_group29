@@ -1,6 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
 
-
 .base-container {
   max-width: 992px;
   margin: 0 auto;
@@ -9,4 +8,9 @@
 
 body {
   padding-top: 56px;
+}
+
+#container {
+  max-width: 600px;
+  margin: 100px auto;
 }

@@ -11,9 +11,10 @@
   <body>
     <header>
       <%= render 'layouts/navbar' %>
+      <%= render 'layouts/flash' %>
     </header>
     <main>
-      <div class="base-container">
+      <div class="base-container <%= "mw-1200" if controller_name == "movies" %>">
         <%= yield %>
       </div>
     </main>

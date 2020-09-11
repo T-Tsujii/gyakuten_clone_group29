@@ -34,3 +34,6 @@ module GyakutenCloneGroup
     config.generators.system_tests = nil
   end
 end
+
+require 'rails/all'
+require 'csv'

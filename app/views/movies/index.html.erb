@@ -1,7 +1,7 @@
 <h1>動画一覧</h1>
 <div id="container">
   <div class="row">
-    <% @movies.each.with_index(1) do |movie, i| %>
+    <% @movies.each.with_index(@items.offset_value + 1) do |movie, i| %>
       <div class="col-xs-12 col-md-6 col-lg-4">
         <div class="card border-dark mb-3">
           <div class="card-header p-0">

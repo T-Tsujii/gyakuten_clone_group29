@@ -5,56 +5,11 @@
     </div>
     <p>注意！！！:AWSのEC2やRDSは有料サービスとなります。無駄な料金を請求されないためにも、不要なインスタンスは停止・削除をしてください。</p>
     <table class="table table-striped">
-      <thead class="aws-table-head text-white">
+    <thead class="aws-table-head text-white">
         <tr class="table-primary">
           <th class="w-1" style="background-color:#5D99FF;">No.</th>
           <th class="w-5" style="background-color:#5D99FF;">内容</th>
         </tr>
-        <tr style="background-color: rgba(0,0,0,0.05);">
-          <td class="w-1" style="color:black;">1</td>
-          <td class="w-5"><%= link_to '【 第1章 】ネットワーク環境設定', 'aws_texts/1' %></td>
-        </tr>
-        <tr>
-          <td class="w-1" style="color:black;">2</td>
-          <td class="w-5"><%= link_to '【 第2章 】RDSの設定', 'aws_texts/2' %></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.05);">
-          <td class="w-1" style="color:black;">3</td>
-          <td class="w-5"><%= link_to '【 第3章 】EC2の設定', 'aws_texts/3' %></td>
-        </tr>
-        <tr>
-          <td class="w-1" style="color:black;">4</td>
-          <td class="w-5"><%= link_to '【 第4章 】サーバー環境の構築', 'aws_texts/4' %></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.05);">
-          <td class="w-1" style="color:black;">5</td>
-          <td class="w-5"><%= link_to '【 第5章 】Railsアプリを配置する', 'aws_texts/5' %></td>
-        </tr>
-        <tr>
-          <td class="w-1" style="color:black;">6</td>
-          <td class="w-5"><%= link_to '【 第6章 】ロードバランサーを設定する', 'aws_texts/6' %></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.05);">
-          <td class="w-1" style="color:black;">7</td>
-          <td class="w-5"><%= link_to '【 第7章 】Railsアプリの起動', 'aws_texts/7' %></td>
-        </tr>
-        <tr>
-          <td class="w-1" style="color:black;">8</td>
-          <td class="w-5"><%= link_to '【 第8章 】ドメインの取得', 'aws_texts/8' %></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.05);">
-          <td class="w-1" style="color:black;">9</td>
-          <td class="w-5"><%= link_to '【 第9章 】IPアドレスとドメインの関連付け設定', 'aws_texts/9' %></td>
-        </tr>
-        <tr>
-          <td class="w-1" style="color:black;">10</td>
-          <td class="w-5"><%= link_to '【 第10章 】ACMでSSL証明書の取得', 'aws_texts/10' %></td>
-        </tr>
-        <tr style="background-color: rgba(0,0,0,0.05);">
-          <td class="w-1" style="color:black;">11</td>
-          <td class="w-5"><%= link_to '【 第11章 】https化に向けた設定', 'aws_texts/11' %></td>
-        </tr>
-        
       </thead>
       <tbody>
         <% @aws_texts.each.with_index(1) do |aws_text, index| %>

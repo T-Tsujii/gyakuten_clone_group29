@@ -1,6 +1,6 @@
 class LineTextsController < ApplicationController
   def index
-    ＠line_texts = LineTexts.all
+    ＠line_texts = LineTexts.all.order(id: :asc)
   end
 
   def show

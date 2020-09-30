@@ -1,6 +1,6 @@
 class TextBooksController < ApplicationController
   def index
-    @text_books = TextBooks.all
+    @text_books = TextBooks.all.order(id: :asc)
   end
 
   def show

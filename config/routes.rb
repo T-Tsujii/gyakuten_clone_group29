@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   root "movies#index"
   resources :movies, only: [:index]
   resources :aws_texts, only: [:index, :show]
+  resources :users, only: [:new, :create]
+  resources :line_texts, only: [:index, :show]
+  resources :text_books, only: [:index, :show]
 end

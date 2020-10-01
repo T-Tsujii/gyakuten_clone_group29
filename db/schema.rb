@@ -42,10 +42,11 @@ ActiveRecord::Schema.define(version: 2020_09_30_155458) do
   end
 
   create_table "answers", force: :cascade do |t|
-    t.integer "question_id"
+    t.bigint "question_id", null: false
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
   create_table "aws_texts", force: :cascade do |t|
@@ -97,4 +98,5 @@ ActiveRecord::Schema.define(version: 2020_09_30_155458) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
 end

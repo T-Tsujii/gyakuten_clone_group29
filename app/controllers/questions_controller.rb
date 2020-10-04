@@ -1,7 +1,5 @@
 class QuestionsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create,:idnex,:show]
-    def new
-    end
 
     def show
         @question = Question.find(params[:id])
@@ -9,9 +7,8 @@ class QuestionsController < ApplicationController
     end
 
     def index
-        @question = Question.new
-        redirect_to :action => 'index'
         @questions = Questions.all.order(id: :asc)
+        @question = Question.new
     end
 
     def create

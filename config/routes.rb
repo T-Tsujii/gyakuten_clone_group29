@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :line_texts, only: [:index, :show]
   resources :text_books, only: [:index, :show]
   resources :questions do
-    resource :answers, only: [:create]
+    resources :answers, only: [:create]
   end
 end

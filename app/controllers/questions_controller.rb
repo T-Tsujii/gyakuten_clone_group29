@@ -1,15 +1,16 @@
 class QuestionsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create,:idnex,:show]
     def new
-        @question = Question.new
-        @answer = Answer.new
     end
 
     def show
         @question = Question.find(params[:id])
+        @answer = Answer.new
     end
 
     def index
+        @question = Question.new
+        redirect_to :action => 'index'
         @questions = Questions.all.order(id: :asc)
     end
 
@@ -21,6 +22,5 @@ class QuestionsController < ApplicationController
         def question_params
             params.require(:question).permit(:title, :detail)
         end
-
 
 end

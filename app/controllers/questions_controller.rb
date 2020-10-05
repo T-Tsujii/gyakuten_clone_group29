@@ -13,8 +13,28 @@ class QuestionsController < ApplicationController
 
     def create
         @question = Question.new(question_params)
-        @question.save
+        if @question.save
+            flash[:notice] = "質問を投稿しました。"
+            redirect_to("/questions/index")
+        else
+            flash.now[:alert] = "エラーがあります！"
+            render("questions/index")
     end
+
+    def edit 
+        @question=Question.find(params[:id])
+    end
+
+    def update
+        @question = Question.find(params[:id])
+        if @question.update(question_params)
+            flash[:notice] = "質問を編集しました"
+            redirect_to("/questions/#{@question.id}")
+        else
+            flash.now[:alert]="エラーがあります！"
+            render("questions/edit")
+    end
+
     private
         def question_params
             params.require(:question).permit(:title, :detail)

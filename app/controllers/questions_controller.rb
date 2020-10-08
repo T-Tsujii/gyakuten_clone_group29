@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
     def show
         @question = Question.find(params[:id])
         @answer = Answer.new
+        @answers = Answer.all
     end
 
     def index
@@ -32,7 +33,7 @@ class QuestionsController < ApplicationController
             redirect_to @question
         else
             flash.now[:alert]="エラーがあります！"
-            render("questions/#{@question.id}/edit")
+            render("questions/edit")
     end
 
     private

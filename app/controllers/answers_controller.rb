@@ -1,11 +1,10 @@
 class AnswersController < ApplicationController
     def create
         @question = Question.find(params[:question_id])
-        @answer = @question.answer.new(answer_parmas)
-        @answer.question_id = @question
+        @answer = @question.answers.new(answer_parmas)
         if @answer.save
             flash[:notice]="回答を投稿しました"
-            redirect_to("/questions/#{params[:question_id]}")
+            redirect_to @question
         else
             flash.now[:alert]= "エラーがあります!"
             render "questions/show"

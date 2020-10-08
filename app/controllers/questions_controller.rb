@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
         @question = Question.new(question_params)
         if @question.save
             flash[:notice] = "質問を投稿しました。"
-            redirect_to("/questions/index")
+            redirect_to action: :index
         else
             flash.now[:alert] = "エラーがあります！"
             render("questions/index")
@@ -29,10 +29,10 @@ class QuestionsController < ApplicationController
         @question = Question.find(params[:id])
         if @question.update(question_params)
             flash[:notice] = "質問を編集しました"
-            redirect_to("/questions/#{@question.id}")
+            redirect_to @question
         else
             flash.now[:alert]="エラーがあります！"
-            render("questions/edit")
+            render("questions/#{@question.id}/edit")
     end
 
     private

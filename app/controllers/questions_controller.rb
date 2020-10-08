@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
     def show
         @question = Question.find(params[:id])
         @answer = Answer.new
-        @answers = Answer.all
+        @answers = @question.answers.order(id: :desc)
     end
 
     def index

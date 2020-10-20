@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   PER = 18
   def index
-    @movies = Movie.page(params[:page]).per(PER)
+    @movies = Movie.where(genre: params[:genre]).page(params[:page]).per(PER)
   end
-end  
+end

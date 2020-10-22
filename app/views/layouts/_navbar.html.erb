@@ -17,8 +17,14 @@
           <%= link_to "質問集", "#", class: "dropdown-item" %>
         </div>
       </li>
-      <li class="nav-item active">
-        <%= link_to "PHP講座", "#", class: "nav-link" %>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PHP
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <%= link_to "PHPテキスト教材", "#", class: "dropdown-item" %>
+          <%= link_to "PHP動画教材", movies_path(genre: "Php"), class: "dropdown-item" %>
+        </div>
       </li>
       <li class="nav-item active">
         <%= link_to "対談", "#", class: "nav-link" %>

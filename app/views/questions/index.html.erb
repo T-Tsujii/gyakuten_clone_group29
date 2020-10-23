@@ -1,2 +1,10 @@
-<h1>Questions#index</h1>
-<p>Find me in app/views/questions/index.html.erb</p>
+<%
+=begin%>
+ <%= link_to "新規投稿へ", question_path(params[:id]) %>
+<%= @questions.each do |question| %>
+  <p>
+    <%= question.title %>
+  </p>
+<% end %>
+<%
+=end%>

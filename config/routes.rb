@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :aws_texts, only: [:index, :show]
   resources :line_texts, only: [:index, :show]
   resources :text_books, only: [:index, :show]
+  resources :questions, only: [:create, :index, :show]
 end

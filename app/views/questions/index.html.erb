@@ -1,10 +1,20 @@
-<%
-=begin%>
- <%= link_to "新規投稿へ", question_path(params[:id]) %>
-<%= @questions.each do |question| %>
-  <p>
-    <%= question.title %>
-  </p>
+<h1>新規投稿</h1>
+<%= form_with model: @question, local: true do |form| %>
+  <div>
+    <%= form.label :title, "質問" %>
+    <%= form.text_area :title, cols: 50, row: 3, size: 8 %>
+  </div>
+  <div>
+    <%= form.label :detail, "詳細" %>
+    <%= form.text_area :detail, cols: 50, row: 6, size: 8 %>
+  </div>
+  <div>
+    <%= form.submit "送信" %>
+  </div>
+  <div>
+    <% @questions.each do |question| %>
+      <%= question.title %>
+      <%= form.text_area :title, cols: 50, row: 3 %>
+    <% end %>
+  </div>
 <% end %>
-<%
-=end%>

@@ -1,11 +1,11 @@
 class QuestionsController < ApplicationController
   def create
     question = Question.create!(question_params)
-    redirect_to question
   end
 
   def index
     @questions = Question.all.order(id: :desc)
+    @question = Question.new
   end
 
   def show

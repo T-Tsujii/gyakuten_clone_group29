@@ -13,7 +13,6 @@
   </div>
   <div>
     <% @questions.each do |question| %>
-      <%= question.title %>
       <%= form.text_area :title, cols: 50, row: 3 %>
     <% end %>
   </div>

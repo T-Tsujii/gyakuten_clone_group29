@@ -10,8 +10,26 @@ namespace :import_csv do
 
   desc "movieインポートするタスク"
   task movie: :environment do
-    list = Import.csv_data(path: "db/csv_data/movie_data.csv")
+    Movie.destroy_all
+    list = Import.csv_data(path: "db/csv_data/all_movie_data.csv")
     Movie.create!(list)
   end
 
+  desc "import textdata"
+  task textdata: :environment do
+    list = Import.csv_data(path: "db/csv_data/text_data.csv")
+    TextBook.create!(list)
+  end
+
+  desc "import linedata"
+  task linedata: :environment do
+    list = Import.csv_data(path: "db/csv_data/line_data.csv")
+    LineText.create!(list)
+  end
+
+  desc "import questiondata"
+  task questiondata: :environment do
+    list = Import.csv_data(path: "db/csv_data/question_data.csv")
+    Question.create!(list)
+  end
 end

@@ -11,9 +11,25 @@
   <div>
     <%= form.submit "送信" %>
   </div>
-  <div>
-    <% @questions.each do |question| %>
-      <%= form.text_area :title, cols: 50, row: 3 %>
-    <% end %>
-  </div>
 <% end %>
+<div class="container question-container">
+  <a href="/questions/32">
+    <div class="question">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="title-container">
+            <p class="title">
+              テスト１
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="info text-right">
+            <p>質問日　2020年10月25日</p>
+            <p>13 Views</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

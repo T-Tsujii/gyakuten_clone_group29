@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   def create
     question = Question.create!(question_params)
+    redirect_to questions_path
   end
 
   def index

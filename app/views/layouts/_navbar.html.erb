@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl fixed-top bg-primary navbar-dark">
+<nav class="navbar navbar-expand-xl fixed-top navbar-dark" style="background-color:<%= controller_name == 'line_texts' ?  '#28a745' : '#007bff' %>">
   <a class="navbar-brand" href="#">やんばるCODE</a>
   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
         <%= link_to "マネタイズ講座", "#", class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Line@", "#", class: "nav-link" %>
+        <%= link_to "Line@", line_texts_path, class: "nav-link" %>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item active">

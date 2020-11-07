@@ -1,0 +1,28 @@
+<div class="contents-title" text-center>
+    <h1>テキスト教材</h1>
+</div>
+<!--- 検索 --->
+
+<!---テキスト教材一覧（ページネーションなし） --->
+<div id="container">
+  <div class="row">
+    <% @text_books.each.with_index(1) do |textbook, i| %>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="card border-dark mb-3">
+            <a target="_blank" href=textbook.id></a>
+          <div class="card-header p-0">
+            <div class="card-header embed-responsive embed-responsive-16by9">
+              <img loading="lazy" alt=textbook.title class="img-fluid" width="560" height="187" src="https://d5izmuz0mcjzz.cloudfront.net/uploads/text/image/185/6d99bee3-fe84-4e6b-922f-89bea1e8734d.jpeg">"
+            </div>
+            <div class="card-body" width="560" height="187">
+              <a href="#" class="btn btn-primary">視聴済みにする</a>
+              <p class="card-text textbook-title">
+                <%= "No.#{i}: " + textbook.title %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

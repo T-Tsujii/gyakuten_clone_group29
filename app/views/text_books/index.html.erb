@@ -13,9 +13,10 @@
           <div class="card-header p-0">
             <div class="card-header embed-responsive embed-responsive-16by9">
               <img loading="lazy" alt=textbook.title class="img-fluid" width="560" height="187" src="https://d5izmuz0mcjzz.cloudfront.net/uploads/text/image/185/6d99bee3-fe84-4e6b-922f-89bea1e8734d.jpeg">"
+              <%= link_to textbook.title, text_books_path %>
             </div>
             <div class="card-body" width="560" height="187">
-              <a href="#" class="btn btn-primary">視聴済みにする</a>
+              <a href="#" class="btn btn-primary">読破済みにする</a>
               <p class="card-text textbook-title">
                 <%= "No.#{i}: " + textbook.title %>
               </p>

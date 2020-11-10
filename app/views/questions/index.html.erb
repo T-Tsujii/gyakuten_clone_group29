@@ -12,24 +12,27 @@
     <%= form.submit "送信" %>
   </div>
 <% end %>
-<div class="container question-container">
-  <a href="/questions/32">
-    <div class="question">
-      <div class="row">
-        <div class="col-md-7">
-          <div class="title-container">
-            <p class="title">
-              テスト１
-            </p>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="info text-right">
-            <p>質問日　2020年10月25日</p>
-            <p>13 Views</p>
-          </div>
+
+  <div class="container question-container">
+    <a href="/questions/32">
+      <div class="question">
+        <div class="row">
+          <% @questions.each do |question| %>
+            <div class="col-md-7">
+              <div class="title-container">
+                  <p class="title">
+                    <%= question.title %></td>
+                  </p>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="info text-right">
+                <p>質問日<%= l question.created_at, format: :medium %></p>
+                <p>13 Views</p>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
-    </div>
-  </a>
-</div>
+    </a>
+  </div>

@@ -13,26 +13,19 @@
   </div>
 <% end %>
 
-  <div class="container question-container">
-    <a href="/questions/32">
-      <div class="question">
-        <div class="row">
-          <% @questions.each do |question| %>
-            <div class="col-md-7">
-              <div class="title-container">
-                  <p class="title">
-                    <%= question.title %></td>
-                  </p>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="info text-right">
-                <p>質問日<%= l question.created_at, format: :medium %></p>
-                <p>13 Views</p>
-              </div>
-            </div>
-          <% end %>
+<div class="container question-container">
+  <% @questions.each do |question| %>
+    <%= link_to question do %>
+      <div class="row question">
+        <div class="col-md-7 title-container">
+          <p><%= question.title %></p>
+        </div>
+        <div class="col-md-5 info text-right">
+          <p>質問日<%= l question.created_at, format: :medium %></p>
+          <%# 仮の閲覧回数 %>
+          <p>13 Views</p>
         </div>
       </div>
-    </a>
-  </div>
+    <% end %>
+  <% end %>
+</div>

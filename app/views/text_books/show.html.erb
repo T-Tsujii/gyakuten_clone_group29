@@ -1,0 +1,8 @@
+<div class="base-container mw-md">
+  <section id="text-contents" >
+    <h2><%= @text_book.title %></h2>
+      <div class="markdown">
+        <%= markdown(@text_book.content).html_safe %>
+      </div>
+  </section>
+</div>

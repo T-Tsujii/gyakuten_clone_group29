@@ -22,8 +22,7 @@
         </div>
         <div class="col-md-5 info text-right">
           <p>質問日<%= l question.created_at, format: :medium %></p>
-          <%# 仮の閲覧回数 %>
-          <p>13 Views</p>
+          <p><%= question.view_count %>views</p>
         </div>
       </div>
     <% end %>

@@ -11,4 +11,15 @@ class TextBooksController < ApplicationController
     @text_book = TextBook.find(params[:id])
   end
 
+  def search
+    text_book_search = TextBookSearch.new(params_text_book_search)
+    @text_books = text_book.execute
+  end
+
+  private
+
+  def params_text_book_search
+    params.permit(:search_title)
+  end
+
 end

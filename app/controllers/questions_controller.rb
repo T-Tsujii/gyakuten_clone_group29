@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @question.view_count += 1
     @question.save
-    @answers = Answer.all.order(id: :desc)
+    @answers = @question.answers.order(id: :desc)
     @answer = Answer.new
   end
 

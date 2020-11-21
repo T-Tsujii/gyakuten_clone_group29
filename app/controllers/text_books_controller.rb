@@ -13,7 +13,7 @@ class TextBooksController < ApplicationController
 
   def search
     text_book_search = TextBookSearch.new(params_text_book_search)
-    @text_books = text_book.execute
+    @text_books = text_book_search.execute
   end
 
   private

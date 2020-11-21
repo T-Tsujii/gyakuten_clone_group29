@@ -1,6 +1,10 @@
 class TextBooksController < ApplicationController
   def index
-    @text_books = TextBooks.all.order(id: :asc)
+    if params[:genre].nil?
+      @text_books = TextBook.where(genre: ["Basic", "Git", "Ruby", "Ruby on Rails"])
+    else
+      @text_books = TextBook.where(genre: params[:genre])
+    end
   end
 
   def show

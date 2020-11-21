@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl fixed-top bg-primary navbar-dark">
+<nav class="navbar navbar-expand-xl fixed-top navbar-dark <%= controller_name == 'line_texts' ? 'bg-success' : 'bg-primary' %>">
   <a class="navbar-brand" href="#">やんばるCODE</a>
   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
@@ -10,8 +10,8 @@
           Rails
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <%= link_to "Ruby/Rails教材", "#", class: "dropdown-item" %>
-          <%= link_to "動画教材", root_path, class: "dropdown-item" %>
+          <%= link_to "Ruby/Rails教材", text_books_path, class: "dropdown-item" %>
+          <%= link_to "動画教材", movies_path, class: "dropdown-item" %>
           <%= link_to "AWS講座", aws_texts_path, class: "dropdown-item" %>
           <%= link_to "ライブコーディング", movies_path(genre: "Live"), class: "dropdown-item" %>
           <%= link_to "質問集", questions_path, class: "dropdown-item" %>
@@ -27,22 +27,22 @@
         </div>
       </li>
       <li class="nav-item active">
-        <%= link_to "対談", "#", class: "nav-link" %>
+        <%= link_to "対談", movies_path(genre: "Talk"), class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "情報発信", "#", class: "nav-link" %>
+        <%= link_to "情報発信", movies_path(genre: "Marketing"), class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "動画編集講座", "#", class: "nav-link" %>
+        <%= link_to "動画編集講座", movies_path(genre: "Movie"), class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "ライティング講座", "#", class: "nav-link" %>
+        <%= link_to "ライティング講座", movies_path(genre: "Writing"), class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "マネタイズ講座", "#", class: "nav-link" %>
+        <%= link_to "マネタイズ講座", movies_path(genre: "Money") , class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Line@", "#", class: "nav-link" %>
+        <%= link_to "Line@", line_texts_path, class: "nav-link" %>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item active">

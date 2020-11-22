@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_21_221542) do
+ActiveRecord::Schema.define(version: 2020_11_22_223824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,16 @@ ActiveRecord::Schema.define(version: 2020_11_21_221542) do
     t.integer "view_count", default: 0
   end
 
+  create_table "reads", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "text_book_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["text_book_id"], name: "index_reads_on_text_book_id"
+    t.index ["user_id", "text_book_id"], name: "index_reads_on_user_id_and_text_book_id", unique: true
+    t.index ["user_id"], name: "index_reads_on_user_id"
+  end
+
   create_table "text_books", force: :cascade do |t|
     t.string "genre"
     t.string "title"
@@ -111,6 +121,8 @@ ActiveRecord::Schema.define(version: 2020_11_21_221542) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "reads", "text_books"
+  add_foreign_key "reads", "users"
   add_foreign_key "watches", "movies"
   add_foreign_key "watches", "users"
 end

@@ -6,5 +6,6 @@ class CreateWatches < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :watches, [:user_id, :movie_id], unique: true
   end
 end

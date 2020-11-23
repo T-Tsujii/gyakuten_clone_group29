@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root to: "text_books#index"
-  get 'text_books/search' to: 'text_books#search'
+  get 'text_books/search', to: 'text_books#search'
   
   resources :movies, only: [:index]
   resources :aws_texts, only: [:index, :show]

@@ -6,7 +6,7 @@ class TextBooksController < ApplicationController
       @text_books = TextBook.where(genre: params[:genre])
     end
   end
-
+  
   def show
     @text_book = TextBook.find(params[:id])
   end
@@ -15,6 +15,7 @@ class TextBooksController < ApplicationController
     text_book_search = TextBookSearch.new(params_text_book_search)
     @text_books = text_book_search.execute
   end
+ 
 
   private
 

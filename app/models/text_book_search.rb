@@ -4,6 +4,6 @@ class TextBookSearch
   attr_accessor :search_title
 
   def execute
-    Textbook.ransack(title_cont: @search_title).result
+    TextBook.ransack(title_cont: @search_title).result
   end
 end

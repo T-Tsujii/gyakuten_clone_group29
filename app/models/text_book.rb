@@ -1,5 +1,4 @@
 class TextBook < ApplicationRecord
-  has_many :users, dependent: :destroy
   has_many :reads, dependent: :destroy
   has_many :read_users, through: :reads, source: :user
 

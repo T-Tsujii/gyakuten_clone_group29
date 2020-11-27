@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root to: "text_books#index"
-  
+
   resources :movies, only: [:index]
   resources :aws_texts, only: [:index, :show]
   resources :line_texts, only: [:index, :show]
-  resources :text_books, only: [:index, :show]
+  resources :text_books, only: [:index, :show] do
+    resource :reads, only: [:create, :destroy]
+  end
   resources :questions, only: [:create, :index, :show] do
     resources :answers, only: [:create]
   end

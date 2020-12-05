@@ -3,16 +3,16 @@
   <div class="question-title">
    <%= form.label :title, "【質問】" %>
    <div>
-    <%= form.text_area :title, cols: 50, row: 3, size: 8 %>
+    <%= form.text_area :title, cols: 50, row: 3, size: "76" %>
    </div>
   </div>
   <div class="question-detail">
     <%= form.label :detail, "【詳細】" %>
     <div>
-      <%= form.text_area :title, cols: 50, row: 3, size: 8 %>
+      <%= form.text_area :title, cols: 50, row: 3, size: "76" %>
    </div>
   </div>
-  <%= form.submit "送信", class:'btn-block btn-success btn-lg' %>
+  <%= form.submit "送信", class:'btn-block btn-info' %>
 <% end %>
 
 <div class="container question-container">

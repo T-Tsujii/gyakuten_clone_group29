@@ -68,3 +68,18 @@ td a:hover{
   cursor:pointer;
   color:#34569e !important;
 }
+
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.question-title {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+input.btn-block[type="button"] {
+  width: 100%;
+}

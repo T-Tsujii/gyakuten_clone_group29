@@ -10,5 +10,4 @@ class TextBooksController < ApplicationController
   def show
     @text_book = TextBook.find(params[:id])
   end
-
 end

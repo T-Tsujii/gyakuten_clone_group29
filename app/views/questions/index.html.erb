@@ -1,16 +1,18 @@
 <h1>新規投稿</h1>
 <%= form_with model: @question, local: true do |form| %>
-  <div>
-    <%= form.label :title, "質問" %>
+  <div class="question-title">
+   <%= form.label :title, "【質問】" %>
+   <div>
     <%= form.text_area :title, cols: 50, row: 3, size: 8 %>
+   </div>
   </div>
-  <div>
-    <%= form.label :detail, "詳細" %>
-    <%= form.text_area :detail, cols: 50, row: 6, size: 8 %>
+  <div class="question-detail">
+    <%= form.label :detail, "【詳細】" %>
+    <div>
+      <%= form.text_area :title, cols: 50, row: 3, size: 8 %>
+   </div>
   </div>
-  <div>
-    <%= form.submit "送信" %>
-  </div>
+  <%= form.submit "送信", class:'btn-block btn-success btn-lg' %>
 <% end %>
 
 <div class="container question-container">

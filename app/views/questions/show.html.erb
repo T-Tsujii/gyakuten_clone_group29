@@ -1,8 +1,10 @@
-<p>【質問】 <%= @question.title %></p>
-<p>【詳細】 <%= @question.detail %></p>
+<h3>【質問】</h3>
+<%= @question.title %>
+<h3>【詳細】</h3>
+<%= @question.detail %>
 
 <% @answers.each.with_index(1) do |answer, index| %>
-  <p>【回答<%= index %>】</p>
+  <h3>【回答<%= index %>】</h3>
   <p><%= answer.content %></p>
 <% end %>
 
@@ -10,9 +12,11 @@
 <%= form_with model: [@question, @answer], local: true do |form| %>
   <div>
     <%= form.label :content, "【回答】" %>
-    <%= form.text_area :content %>
+      <div>
+        <%= form.text_area :content, cols: 50, row: 6, size: "76x5" %>
+      </div>
   </div>
   <div>
-    <%= form.submit "送信", data: {confirm: "投稿しますか?"} %>
+    <%= form.submit "送信", data: {confirm: "投稿しますか?"} , class:'btn-block btn-info' %>
   </div>
 <% end %>

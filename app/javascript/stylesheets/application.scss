@@ -75,11 +75,13 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  padding: 20px 0px 10px 0px;
+  font-size: 1rem;
+  text-align: left;
+}
+
 .question-title {
   display: inline-block;
   margin-bottom: 0.5rem;
-}
-
-input.btn-block[type="button"] {
-  width: 100%;
 }

@@ -23,37 +23,38 @@ body {
   margin: 100px auto;
 }
 
-.btn-primary{
-  width:100%;
-  text-align:center;
+.btn-primary {
+  width: 100%;
+  text-align: center;
 }
 
 .style-sign-in1 {
-  width:100%;
-  text-align:center;
-  background-color:#17a2b8;
-  padding:0.4rem 0;
-  border-radius:0.25rem;
-}
-.style-sign-in1 a{
-  color:white;
-  width:100%;
-  text-align:center;
-  background-color:#17a2b8;
-  padding:0.4rem 0;
-  border-radius:0.25rem;
+  width: 100%;
+  text-align: center;
+  background-color: #17a2b8;
+  padding: 0.4rem 0;
+  border-radius: 0.25rem;
 }
 
-.style-sign-up1{
-  width:100%;
-  text-align:center;
-  background-color:#28a745;
-  padding:0.4rem 0;
-  border-radius:0.25rem;
+.style-sign-in1 a {
+  color: white;
+  width: 100%;
+  text-align: center;
+  background-color: #17a2b8;
+  padding: 0.4rem 0;
+  border-radius: 0.25rem;
 }
 
-.style-sign-up1 a{
-  color:white;
+.style-sign-up1 {
+  width: 100%;
+  text-align: center;
+  background-color: #28a745;
+  padding: 0.4rem 0;
+  border-radius: 0.25rem;
+}
+
+.style-sign-up1 a {
+  color: white;
 }
 
 .mw-1200 {
@@ -84,4 +85,18 @@ h3 {
 .question-title {
   display: inline-block;
   margin-bottom: 0.5rem;
+}
+td a:hover {
+  cursor: pointer;
+  color: #34569e !important;
+}
+
+h1 {
+  margin: 10px auto;
+  max-width: 300px;
+}
+
+#search-box {
+  margin: 0 auto;
+  max-width: 300px;
 }

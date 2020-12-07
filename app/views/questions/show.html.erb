@@ -1,22 +1,20 @@
-<h3>【質問】</h3>
-<%= @question.title %>
-<h3>【詳細】</h3>
-<%= @question.detail %>
+<div class="container" id="answer-container">
+  <h3>【質問】</h3>
+    <p><%= @question.title %></p>
+  <h3>【詳細】</h3>
+    <p><%= @question.detail %></p>
 
-<% @answers.each.with_index(1) do |answer, index| %>
-  <h3>【回答<%= index %>】</h3>
-  <p><%= answer.content %></p>
-<% end %>
+  <% @answers.each.with_index(1) do |answer, index| %>
+    <h3>【回答<%= index %>】</h3>
+      <p><%= answer.content %></p>
+  <% end %>
 
-<h1>回答投稿</h1>
-<%= form_with model: [@question, @answer], local: true do |form| %>
-  <div>
-    <%= form.label :content, "【回答】" %>
-      <div>
-        <%= form.text_area :content, class:'form-control' %>
-      </div>
-  </div>
-  <div>
-    <%= form.submit "送信", data: {confirm: "投稿しますか?"} , class:'btn-block btn-info' %>
-  </div>
-<% end %>
+  <h1>回答投稿</h1>
+  <%= form_with model: [@question, @answer], local: true do |form| %>
+    <div class="form-group">
+      <%= form.label :content, "【回答】" %>
+      <%= form.text_area :content, class:'form-control' %>
+    </div>
+    <%= form.submit "送信", data: {confirm: "投稿しますか?"} , class:'btn btn-block btn-info' %>
+  <% end %>
+</div>

@@ -1,5 +1,20 @@
 @import "~bootstrap/scss/bootstrap";
 
+h1 {
+  padding: 20px 0px 10px 0px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  padding: 20px 0px 10px 0px;
+  font-size: 1rem;
+}
+
+body {
+  padding-top: 56px;
+}
+
 .base-container {
   max-width: 600px;
   margin: 0 auto;
@@ -14,18 +29,9 @@
   @extend .alert-danger;
 }
 
-body {
-  padding-top: 56px;
-}
-
 #container {
   max-width: 600px;
   margin: 100px auto;
-}
-
-.btn-primary {
-  width: 100%;
-  text-align: center;
 }
 
 .style-sign-in1 {
@@ -70,45 +76,21 @@ td a:hover{
   color:#34569e !important;
 }
 
-h1 {
-  padding: 20px 0px 10px 0px;
-  font-size: 2rem;
-  text-align: center;
-}
-
-h3 {
-  padding: 20px 0px 10px 0px;
-  font-size: 1rem;
-  text-align: left;
-}
-
-.question-title {
-  margin: 10px;
-  padding: 10px;
-}
-
-.question-detail {
-  margin: 10px;
-  padding: 10px;
-}
-
-td a:hover {
-  cursor: pointer;
-  color: #34569e !important;
-}
-
-h1 {
-  margin: 10px auto;
-  max-width: 300px;
-}
-
 #search-box {
   margin: 0 auto;
   max-width: 300px;
 }
 
-.question-container {
-  padding: 30px;
+#question-container {
+
+  .form-group {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
 
   a {
     text-decoration: none;
@@ -133,7 +115,7 @@ h1 {
       color: #BBBBBB;
     }
 
-    :hover {
+    &:hover {
       border: solid 2px #7d9ccb;
       -webkit-transform: translateY(-5px);
       -ms-transform: translateY(-5px);
@@ -145,8 +127,4 @@ h1 {
   .question {
     padding: 10px;
   }
-}
-
-.form-control {
-  margin-bottom: 10px;
 }

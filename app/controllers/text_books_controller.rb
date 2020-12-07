@@ -5,6 +5,7 @@ class TextBooksController < ApplicationController
       @q = TextBook.where(genre: ["Basic", "Git", "Ruby", "Ruby on Rails"]).ransack(params[:q])
       @text_books = @q.result
     else
+      @q = TextBook.where(genre: ["Basic", "Git", "Ruby", "Ruby on Rails","Php"]).ransack(params[:q])
       @text_books = TextBook.where(genre: params[:genre])
     end
   end

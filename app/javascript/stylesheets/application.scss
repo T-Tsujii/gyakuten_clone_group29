@@ -1,5 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
+@import "question";
 
+/* 全体 */
 h1 {
   padding: 20px 0px 10px 0px;
   font-size: 2rem;
@@ -15,12 +17,17 @@ body {
   padding-top: 56px;
 }
 
+.mw-1200 {
+  max-width: 1200px;
+}
+
 .base-container {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
 }
 
+/* アラート */
 .alert-notice {
   @extend .alert-success;
 }
@@ -63,10 +70,6 @@ body {
   color: white;
 }
 
-.mw-1200 {
-  max-width: 1200px;
-}
-
 .card-body {
   height: 250px;
 }
@@ -76,55 +79,8 @@ td a:hover{
   color:#34569e !important;
 }
 
+/* 検索ボックス */
 #search-box {
   margin: 0 auto;
   max-width: 300px;
-}
-
-#question-container {
-
-  .form-group {
-    margin: 10px;
-    padding: 10px;
-  }
-
-  .btn {
-    margin-bottom: 10px;
-  }
-
-  a {
-    text-decoration: none;
-    display: block;
-    color: #333333;
-    margin-bottom: 20px;
-    border: solid 2px #505050;
-    border-radius: 10px;
-    transition: .4s;
-
-    .title-container {
-      word-wrap: normal;
-    }
-
-    .title {
-      font-size: 22px;
-      line-height: 2;
-    }
-
-    .info {
-      padding: 10px 10px 10px 20px;
-      color: #BBBBBB;
-    }
-
-    &:hover {
-      border: solid 2px #7d9ccb;
-      -webkit-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-      transform: translateY(-5px);
-      transition: .4s;
-    }
-  }
-
-  .question {
-    padding: 10px;
-  }
 }

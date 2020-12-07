@@ -1,0 +1,39 @@
+/* 質問集 */
+#question-container {
+  a {
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 2px #505050;
+    border-radius: 10px;
+    transition: .4s;
+
+    .title-container {
+      word-wrap: normal;
+    }
+
+    .title {
+      font-size: 22px;
+      line-height: 2;
+    }
+
+    .info {
+      padding: 10px 10px 10px 20px;
+      color: #BBBBBB;
+    }
+
+    &:hover {
+      border: solid 2px #7d9ccb;
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+      transition: .4s;
+    }
+  }
+
+  .question {
+    padding: 10px;
+  }
+}

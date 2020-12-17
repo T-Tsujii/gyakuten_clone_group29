@@ -5,6 +5,7 @@ class WatchesController < ApplicationController
   end
 
   def destroy
-    current_user.reads.find_by(movie_id: params[:movie_id]).destroy!
+    current_user.watches.find_by(movie_id: params[:movie_id]).destroy!
     redirect_back(fallback_location: root_path)
+  end
 end

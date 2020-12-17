@@ -6,5 +6,5 @@ class TextBook < ApplicationRecord
 
   def read_by?(user)
     reads.find_by(user_id: user.id).present?
-  end  
+  end
 end

@@ -5,4 +5,9 @@ class Movie < ApplicationRecord
   validates :title , presence: true
   validates :url , presence: true
   validates :genre, presence: true
+
+  def watched_by?(user)
+    watches.find_by(user_id: user.id).present?
+  end
+
 end

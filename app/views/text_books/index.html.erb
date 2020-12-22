@@ -14,7 +14,7 @@
                 <img loading="lazy" class="img-fluid" width="560" height="187" src=<%= textbook.image %> >
               </div>
               <div class="card-body" width="560" height="187">
-                <% if textbook.read_by?(current_user) %>
+                <% if @read_text_books_ids.include?(textbook.id) %>
                   <%= render "read", textbook: textbook %>
                 <% else %>
                   <%= render "not_read", textbook: textbook %>

@@ -6,5 +6,6 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.where(genre: params[:genre]).page(params[:page]).per(PER)
     end
+    @watched_movie_ids = current_user.watches.pluck(:movie_id)
   end
 end

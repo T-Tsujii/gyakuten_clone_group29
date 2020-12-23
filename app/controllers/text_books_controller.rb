@@ -7,6 +7,7 @@ class TextBooksController < ApplicationController
     else
       @text_books = TextBook.where(genre: params[:genre])
     end
+    @read_textbooks_ids = current_user.reads.pluck(:text_book_id)
   end
   
   def show

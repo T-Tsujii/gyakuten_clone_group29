@@ -14,14 +14,14 @@
                 <img loading="lazy" class="img-fluid" width="560" height="187" src=<%= textbook.image %> >
               </div>
               <div class="card-body" width="560" height="187">
-                <% if @read_text_books_ids.include?(textbook.id) %>
+                <% if @read_textbooks_ids.include?(textbook.id) %>
                   <%= render "read", textbook: textbook %>
                 <% else %>
                   <%= render "not_read", textbook: textbook %>
                 <% end %>
                 <p class="card-text textbook-title">
                   <%= "【" + textbook.genre + "】" %><br>
-                  <%= "No.#{i}: " + textbook.title %>
+                  <%= "No." + textbook.id.to_s + " : " + textbook.title %>
                 </p>
               </div>
             </div>

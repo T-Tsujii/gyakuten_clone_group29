@@ -10,9 +10,9 @@
             </div>
             <div class="card-body">
               <% if movie.watched_by?(current_user) %>
-                <%= link_to "視聴済みを解除", movie_watches_path(movie.id), method: :delete %>
+                <%= render "watched", movie: movie %>
               <% else %>
-                <%= link_to "視聴済みにする", movie_watches_path(movie.id), method: :post %>
+                <%= render "not_watched", movie: movie %>
               <% end %>
               <p class="card-text movie-title">
                 <%= "No.#{i}: " + movie.title %>

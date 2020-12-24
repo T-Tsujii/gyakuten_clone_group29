@@ -1,6 +1,6 @@
 <div id="search-box">
   <%= search_form_for @q do |f| %>
-    <%= f.hidden_field :genre, value: params[:genre] %>
+    <%= hidden_field_tag :genre, params[:genre] %>
       <div class="d-flex">
         <div class="form-group flex-grow-1">
           <%= f.search_field :title_cont, placeholder: "教材を探す", class: "form-control" %>

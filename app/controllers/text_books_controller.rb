@@ -8,6 +8,7 @@ class TextBooksController < ApplicationController
       @q = TextBook.where(genre: params[:genre]).ransack(params[:q])
     end
     @text_books = @q.result
+    @read_textbooks_ids = current_user.reads.pluck(:text_book_id)
   end
   
   def show

@@ -14,10 +14,10 @@
                 <img loading="lazy" class="img-fluid" width="560" height="187" src=<%= textbook.image %> >
               </div>
               <div class="card-body" width="560" height="187">
-                <% if textbook.read_by?(current_user) %>
-                  <%= link_to "読破済みを解除", text_book_reads_path(textbook.id), method: :delete %>
+                <% if @read_textbooks_ids.include?(textbook.id) %>
+                  <%= render "read", textbook: textbook %>
                 <% else %>
-                  <%= link_to "読破済みにする", text_book_reads_path(textbook.id), method: :post %>
+                  <%= render "not_read", textbook: textbook %>
                 <% end %>
                 <p class="card-text textbook-title">
                   <%= "【" + textbook.genre + "】" %><br>

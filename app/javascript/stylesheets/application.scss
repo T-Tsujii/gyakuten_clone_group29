@@ -71,7 +71,10 @@ body {
 }
 
 .card-body {
-  height: 250px;
+  height: 200px;
+}
+.embed-responsive-16by9::before {
+  padding-top:10%;
 }
 
 td a:hover{

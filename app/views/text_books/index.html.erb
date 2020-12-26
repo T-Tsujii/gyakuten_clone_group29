@@ -14,15 +14,17 @@
                 <img loading="lazy" class="img-fluid" width="560" height="187" src=<%= textbook.image %> >
               </div>
               <div class="card-body" width="560" height="187">
-                <% if @read_textbooks_ids.include?(textbook.id) %>
-                  <%= render "read", textbook: textbook %>
+              <p id = "text_book-<%= textbook.id %>">
+                <% if @read_textbook_ids.include?(textbook.id) %>
+                  <%= render "read", text_book: textbook %>
                 <% else %>
-                  <%= render "not_read", textbook: textbook %>
+                  <%= render "not_read", text_book: textbook %>
                 <% end %>
                 <p class="card-text textbook-title">
                   <%= "【" + textbook.genre + "】" %><br>
                   <%= "No.#{i}: " + textbook.title %>
                 </p>
+              </p>
               </div>
             </div>
           </div>

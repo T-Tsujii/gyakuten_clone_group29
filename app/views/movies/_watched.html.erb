@@ -1,2 +1,2 @@
-<%= link_to "視聴済みを解除", movie_watches_path(movie.id), method: :delete %>
+<%= link_to "視聴済みを解除", movie_watches_path(movie), class: "btn btn-primary", method: :delete, remote: true %>
  

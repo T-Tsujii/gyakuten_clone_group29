@@ -9,6 +9,7 @@
               <iframe class="embed-responsive-item" width="560" height="315" src=<%= movie.url %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="card-body">
+            <p id = "movie-<%= movie.id %>">
               <% if @watched_movie_ids.include?(movie.id) %>
                 <%= render "watched", movie: movie %>
               <% else %>
@@ -17,6 +18,7 @@
               <p class="card-text movie-title">
                 <%= "No.#{i}: " + movie.title %>
               </p>
+            </p>
             </div>
           </div>
         </div>

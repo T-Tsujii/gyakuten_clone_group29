@@ -75,9 +75,16 @@ body {
   width: 180px;
 }
 
-// .embed-responsive-16by9::before {
-//   // padding-top:10%;
-// }
+.embed-responsive-16by9::before {
+  padding-top: 10%;
+}
+
+#movie-part {
+  .embed-responsive-16by9::before {
+    padding-top: 60%;
+  }
+}
+
 
 td a:hover {
   cursor: pointer;

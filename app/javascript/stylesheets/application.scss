@@ -72,14 +72,16 @@ body {
 
 .card-body {
   height: 200px;
-}
-.embed-responsive-16by9::before {
-  padding-top:10%;
+  width: 180px;
 }
 
-td a:hover{
-  cursor:pointer;
-  color:#34569e !important;
+// .embed-responsive-16by9::before {
+//   // padding-top:10%;
+// }
+
+td a:hover {
+  cursor: pointer;
+  color: #34569e !important;
 }
 
 /* 検索ボックス */
@@ -89,6 +91,6 @@ td a:hover{
 }
 
 /*navbar見た目調整*/
-.navbar{
-  padding-left:3rem;
+.navbar {
+  padding-left: 3rem;
 }
